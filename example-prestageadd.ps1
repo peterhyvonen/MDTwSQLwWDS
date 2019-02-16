@@ -1,0 +1,1 @@
+WDSUTIL /add-device /device:<servername> /ID:<mac-address>
