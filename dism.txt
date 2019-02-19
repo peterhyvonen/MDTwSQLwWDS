@@ -1,0 +1,5 @@
+dism /mount-wim /wimfile:c:\WinImaging\ISOs\8desk\sources\install.wim /index:1 /mountdir:c:\WinImaging\Working
+c:\WinImaging\ISOs\8desk\Sources\dism.exe  /image:c:\WinImaging\Working /add-driver /driver:c:\WinImaging\Drivers /recurse /forceunsigned
+dism /unmount-wim /mountdir:c:\WinImaging\Working /commit
+"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg\Oscdimg.exe" -m -o -u2 -udfver102 -bootdata:2#p0,e,bC:\WinImaging\ISOs\8desk\boot\etfsboot.com#pEF,e,bC:\WinImaging\ISOs\8desk\efi\microsoft\boot\Efisys.bin C:\WinImaging\ISOs\8desk c:\8desk-with-drivers.iso
+dism /get-wiminfo /wimfile:"c:\WinImaging\ISOs\8desk\sources\install.wim"
